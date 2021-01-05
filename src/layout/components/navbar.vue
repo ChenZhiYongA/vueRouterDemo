@@ -1,6 +1,10 @@
 <template>
     <div>
-        temper
+        navbar
+        <router-link to="/about">user</router-link> &nbsp;
+        <router-link to="/">home</router-link>&nbsp;
+        <router-link to="/login">login</router-link>
+
     </div>
 </template>
 
@@ -16,9 +20,6 @@
                 data1: [],
                 data2From: Object.assign({}, data2FromQuery),
             }
-        },
-        mounted: {},
-        created() {
         },
         methods: {},
     }

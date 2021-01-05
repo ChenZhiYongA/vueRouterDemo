@@ -1,6 +1,6 @@
 <template>
     <div>
-        temper
+        404
     </div>
 </template>
 
@@ -16,9 +16,6 @@
                 data1: [],
                 data2From: Object.assign({}, data2FromQuery),
             }
-        },
-        mounted: {},
-        created() {
         },
         methods: {},
     }
