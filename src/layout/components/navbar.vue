@@ -3,13 +3,13 @@
         navbar
         <router-link v-for="(item,index) in $router.options.routes" v-bind:key="index" :to="item.path">
             <span v-if="!item.hidden">
-                <span v-for="(child,index) in item.children" v-bind:key="index">
+                <router-link v-for="(child,index) in item.children" v-bind:key="index" :to="child.path">
                     {{ child.meta.title }}
-                </span>
-            </span>&nbsp;
+                </router-link>
+            </span>
             <span v-else>
                 {{ item.meta.title }}
-            </span>&nbsp;
+            </span>
         </router-link>
 
     </div>
