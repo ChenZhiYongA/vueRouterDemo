@@ -10,22 +10,30 @@ export const constantRouterMap = [
             path: 'dashboard',
             component: () => import('@/views/Home'),
             name: 'Dashboard',
-            meta: { title: '首页', icon: 'home', noCache: true }
-        },{
+            meta: {title: '首页', icon: 'home', noCache: true}
+        }, {
             path: 'about',
             component: () => import('@/views/About'),
             name: 'about',
-            meta: { title: '关于', icon: 'home', noCache: true }
+            meta: {title: '关于', icon: 'home', noCache: true}
         }]
     },
     {
         path: '/login',
         component: () => import('@/views/404'),
         hidden: true,
-        meta: { title: '登录', icon: 'home', noCache: true }
-
+        meta: {title: '登录', icon: 'home', noCache: true}
     },
 
+]
+
+export const asyncRoutes = [
+    {
+        path: '/login',
+        component: () => import('@/views/404'),
+        hidden: true,
+        meta: {title: '登录', icon: 'home', noCache: true,roles:['admin']}
+    },
 ]
 
 const router = createRouter({
