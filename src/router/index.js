@@ -15,28 +15,17 @@ export const constantRouterMap = [
             path: 'about',
             component: () => import('@/views/About'),
             name: 'about',
-            meta: { title: 'about', icon: 'home', noCache: true }
+            meta: { title: '关于', icon: 'home', noCache: true }
         }]
     },
     {
         path: '/login',
         component: () => import('@/views/404'),
-        hidden: true
-    },
-    {
-        path: '/404', component: Layout, hidden: true,
-        children: [{
-            path: '',
-            component: () => import('@/views/404')
-        }]
-    },
-    {
-        path: '/login',
-        // component: Layout,
         hidden: true,
-        name: 'login',
-        component: () => import('@/views/About')
-    }
+        meta: { title: '登录', icon: 'home', noCache: true }
+
+    },
+
 ]
 
 const router = createRouter({

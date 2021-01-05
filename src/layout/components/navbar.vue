@@ -1,9 +1,16 @@
 <template>
     <div>
         navbar
-        <router-link to="/about">user</router-link> &nbsp;
-        <router-link to="/">home</router-link>&nbsp;
-        <router-link to="/login">login</router-link>
+        <router-link v-for="(item,index) in $router.options.routes" v-bind:key="index" :to="item.path">
+            <span v-if="!item.hidden">
+                <span v-for="(child,index) in item.children" v-bind:key="index">
+                    {{ child.meta.title }}
+                </span>
+            </span>&nbsp;
+            <span v-else>
+                {{ item.meta.title }}
+            </span>&nbsp;
+        </router-link>
 
     </div>
 </template>
